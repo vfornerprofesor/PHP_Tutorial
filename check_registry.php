@@ -21,15 +21,7 @@
         $_SESSION["user"]=$user;
         header("location:index.php");
     } else {
-        $post_data = array(
-            'user' => $user,
-            'password' => $password
-        );
-    
-        // Send a request to example.com
-        $this->post_request('login.php', $post_data);
-    
-        //header("location:login.php");
+        header("location:login.php");
     }
     
 
