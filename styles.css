@@ -1,0 +1,41 @@
+:root {
+    --main-bg-color: rgb(39, 39, 39);
+    --main-selected-color: rgb(140, 140, 240);
+    --main-letter-color: white;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-letter-color);
+}
+
+.img_logo {
+    display: block;
+    text-align: center;
+    width: 300px;
+    margin: 50px auto;
+}
+
+.div_signin_signup {
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+} 
+.div_signin_signup > h2 {
+    text-align: center;
+}
+
+.div_signin_signup > form > input, .div_signin_signup > form > p {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 10px;
+}
+
+.div_signin_signup > a {
+    color: var(--main-selected-color);
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
