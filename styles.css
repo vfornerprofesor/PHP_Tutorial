@@ -43,3 +43,9 @@ body {
 .error {
     color: rgb(238, 59, 59);
 }
+.header > table {
+    width: 100%;
+}
+.header > table > tbody >tr > td {
+    width: 33%;
+}

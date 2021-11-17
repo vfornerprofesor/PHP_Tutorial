@@ -18,8 +18,22 @@
     </head> 
 
     <body>
-        <p>hello <?php echo $user ?></p>
-        <a href='logout.php'>Tancar sessió</a>
+        <div class="header">
+            <table>
+                <tr>
+                    <td>
+                        <img style="display: block;margin-left: auto;margin-right: auto;" width=100px src="img/icon.png" />
+                    </td>
+                    <td>
+                        <h1 style="text-align:center">Reparacions VF</h1>
+                    </td>
+                    <td>
+                        <p style="text-align:right">Benvingut <?php echo $user; ?>  <a href='logout.php'>Tancar sessió</a></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
 
     </body>
 
