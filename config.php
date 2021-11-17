@@ -5,20 +5,16 @@
     define('DB_USERNAME', 'phpmyadmin');
     define('DB_PASSWORD', 'vf');
     define('DB_NAME', 'reparacionsvf_db');
-    
-    /* Attempt to connect to MySQL database */
-    $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    
-    // Check connection
-    if($link === false){
-        die("ERROR: Could not connect. " . mysqli_connect_error());
-    }
 
-
-    try {
-        $base = new PDO("mysql:host=localhost; dbname=reparacionsvf_db", "root", "");
-        $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch(Exception $e) {
-        die("Error".$e->getMessage());
+    function get_connection() {
+        $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME) or die ("could not connect to mysql");;
+        if(mysqli_connect_errno()) {
+            echo "Error al connectar amb la base de dades";
+            exit();
+        }
+        mysqli_set_charset($connection, "utf8");
+        return $connection;
     }
+    
+
 ?>
